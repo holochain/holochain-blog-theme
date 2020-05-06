@@ -271,3 +271,29 @@ body.tag-dev-pulse .hero-back {
 }
 
 /* end partials/post.hbs */
+
+/* Page footer */
+
+.site-footer-global-nav {
+    background: rgba(0, 0, 0, 0.75);
+    color: rgba(255, 255, 255, 0.65);
+    align-items: normal;
+    font-size: inherit;
+    line-height: normal;
+}
+.site-footer-global-nav__section {
+    flex: auto;
+}
+.site-footer-global-nav h3 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.site-footer-global-nav ul {
+    list-style: none;
+    padding: 0;
+}
+.site-footer-global-nav li {
+    margin: .25em 0;
+    padding-left: 0;
+    line-height: inherit;
+}
