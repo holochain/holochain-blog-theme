@@ -29,6 +29,38 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#620afd', endColorstr='#18bfda',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+/* See partials/header.hbs for explanation of this. */
+
+.responsive-header-img {
+    background-image: url({{img_url background size='xl'}});
+}
+@media(max-width: 1000px) {
+    .responsive-header-img {
+        background-image: url({{img_url background size='l'}});
+        background-image: -webkit-image-set(
+                url({{img_url background size='l'}}) 1x,
+                url({{img_url background size='xl'}}) 2x
+        );
+        background-image: image-set(
+                url({{img_url background size='l'}}) 1x,
+                url({{img_url background size='xl'}}) 2x
+        );
+    }
+}
+@media(max-width: 600px) {
+    .responsive-header-img {
+        background-image: url({{img_url background size='m'}});
+        background-image: -webkit-image-set(
+                url({{img_url background size='m'}}) 1x,
+                url({{img_url background size='l'}}) 2x
+        );
+        background-image: image-set(
+                url({{img_url background size='m'}}) 1x,
+                url({{img_url background size='l'}}) 2x
+        );
+    }
+}
+
 /* NEW */
 
 .site-header:after, .site-header:before { display: none; }
@@ -197,3 +229,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 @media (max-width: 640px) {
     .subscribe-form { padding: 10.5vw 7vw 11vw }
 }
+
+/* This originally lived in the default.hbs file, in the <body> element. */
+
+.h-banner { width: 100%; height: 50px; background: #2F1F62; z-index: 100; font-family: 'Work Sans'; position: relative; }
+.h-wrap { width: 100%; max-width: 1200px; position: relative; margin: auto; }
+.h-pad { padding: 0 4vw; }
+.h-nav { list-style: none; margin: 0; padding: 0; float: left; }
+.h-nav li { margin: 0 25px 0 0; padding: 0; float: left; line-height: 47px; }
+.h-nav li a { font-size: 15px; line-height: 50px; color: #FFF; text-decoration: none; font-weight: 400; position: relative; }
+.h-nav li img { width: 30px; height: auto; vertical-align: middle; margin-left: -5px; margin-top: -3px; max-width: none; }
+.h-nav li.tab-blog a:after { content:''; width: 100%; height: 2px; background: rgba(255,255,255,.3); position: absolute; bottom: -1px; left: 0; }
+.h-icons { float: right; list-style: none; margin: 0; padding: 0; }
+.h-icons li { width: 18px; margin: 0 0 0 15px; padding: 0; line-height: 47px; float: left; }
+.h-icons li:first-child { width: auto; margin: 0 10px 0 0; line-height: 49px; }
+.h-icons li:first-child a { color: #FFF; font-size: 14px; font-weight: bold; letter-spacing: .4px; text-decoration: none; }
+.h-icons svg { fill: #FFF; vertical-align: middle; }
+
+@media (max-width: 750px) {
+    .h-icons li:first-child { display: none; }
+}
+
+@media (max-width: 640px) {
+    .h-nav li { margin: 0 15px 0 0; }
+    .h-nav li a { font-size: 15px; }
+    .h-icons { top: 17px; }
+    .h-icons li { width: 15px; margin: 0 0 0 12px; }
+    .h-hide { display: none; }
+}
+
+/* end default.hbs */
+
+/* This originally lived in partials/post.hbs */
+
+.hero-back { background-image:url({{img_url feature_image size="xl"}}); }
+body.tag-dev-pulse .hero-back {
+    background-image:url({{img_url feature_image size="xl"}}), -webkit-linear-gradient(to right, #6000FF, #00EAD2);
+    background-image:url({{img_url feature_image size="xl"}}), -moz-linear-gradient(to right, #6000FF, #00EAD2);
+    background-image:url({{img_url feature_image size="xl"}}), -o-linear-gradient(to right, #6000FF, #00EAD2);
+    background-image:url({{img_url feature_image size="xl"}}), linear-gradient(to right, #6000FF, #00EAD2);
+}
+
+/* end partials/post.hbs */

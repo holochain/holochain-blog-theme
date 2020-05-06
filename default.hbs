@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
@@ -49,34 +50,6 @@
         </div>
     </div>
 </div>
-
-<style>
-    .h-banner { width: 100%; height: 50px; background: #2F1F62; z-index: 100; font-family: 'Work Sans'; position: relative; }
-    .h-wrap { width: 100%; max-width: 1200px; position: relative; margin: auto; }
-    .h-pad { padding: 0 4vw; }
-    .h-nav { list-style: none; margin: 0; padding: 0; float: left; }
-    .h-nav li { margin: 0 25px 0 0; padding: 0; float: left; line-height: 47px; }
-    .h-nav li a { font-size: 15px; line-height: 50px; color: #FFF; text-decoration: none; font-weight: 400; position: relative; }
-    .h-nav li img { width: 30px; height: auto; vertical-align: middle; margin-left: -5px; margin-top: -3px; max-width: none; }
-    .h-nav li.tab-blog a:after { content:''; width: 100%; height: 2px; background: rgba(255,255,255,.3); position: absolute; bottom: -1px; left: 0; }
-    .h-icons { float: right; list-style: none; margin: 0; padding: 0; }
-    .h-icons li { width: 18px; margin: 0 0 0 15px; padding: 0; line-height: 47px; float: left; }
-    .h-icons li:first-child { width: auto; margin: 0 10px 0 0; line-height: 49px; }
-    .h-icons li:first-child a { color: #FFF; font-size: 14px; font-weight: bold; letter-spacing: .4px; text-decoration: none; }
-    .h-icons svg { fill: #FFF; vertical-align: middle; }
-
-    @media (max-width: 750px) {
-        .h-icons li:first-child { display: none; }
-    }
-
-    @media (max-width: 640px) {
-        .h-nav li { margin: 0 15px 0 0; }
-        .h-nav li a { font-size: 15px; }
-        .h-icons { top: 17px; }
-        .h-icons li { width: 15px; margin: 0 0 0 12px; }
-        .h-hide { display: none; }
-    }
-</style>
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
