@@ -1,12 +1,6 @@
-# Casper
+# Casper (Holochain)
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
-
-&nbsp;
-
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
-
-&nbsp;
+The Casper theme, Ghost's default theme, modified for (and used on) https://blog.holochain.org. Currently I'm just using this repo for source management and not continuous integration -- I just package the repo up in a zip and upload it using Ghost's admin interface.
 
 # First time using a Ghost theme?
 
