@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    {{#is "post"}}
+    <title>{{meta_title}} - Holochain Blog</title>
+    {{else}}
+    <title>{{meta_title}}</title>
+    {{/is}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+
+<div class="h-banner">
+    <div class="h-pad">
+        <div class="h-wrap">
+            <ul class="h-nav">
+                <li><a href="/"><img src="https://forum.holochain.org/uploads/default/original/1X/79f6577e3c8102e1f0caf8d2f43d4fcf472a3e34.png"></a></li>
+                <li class="tab-home h-hide"><a href="https://holochain.org">Holochain.org</a></li>
+                <li class="tab-developers"><a href="https://developer.holochain.org/">Developers</a></li>
+                <li class="tab-forum"><a href="https://forum.holochain.org/">Forum</a></li>
+                <li class="tab-blog"><a href="https://blog.holochain.org/">Blog</a></li>
+            </ul>
+            <ul class="h-icons">
+                <li><a href="https://blog.holochain.org/#subscribe" target="_blank">Subscribe</a></li>
+                <li><a href="https://github.com/holochain/holochain-rust/" target="_blank" title="GitHub">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a></li>
+                <li><a href="https://twitter.com/holochain" target="_blank" title="Twitter">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+                </a></li>
+                <li><a href="https://www.facebook.com/holochain.design/" target="_blank" title="Facebook">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .h-banner { width: 100%; height: 50px; background: #2F1F62; z-index: 100; font-family: 'Work Sans'; position: relative; }
+    .h-wrap { width: 100%; max-width: 1200px; position: relative; margin: auto; }
+    .h-pad { padding: 0 4vw; }
+    .h-nav { list-style: none; margin: 0; padding: 0; float: left; }
+    .h-nav li { margin: 0 25px 0 0; padding: 0; float: left; line-height: 47px; }
+    .h-nav li a { font-size: 15px; line-height: 50px; color: #FFF; text-decoration: none; font-weight: 400; position: relative; }
+    .h-nav li img { width: 30px; height: auto; vertical-align: middle; margin-left: -5px; margin-top: -3px; max-width: none; }
+    .h-nav li.tab-blog a:after { content:''; width: 100%; height: 2px; background: rgba(255,255,255,.3); position: absolute; bottom: -1px; left: 0; }
+    .h-icons { float: right; list-style: none; margin: 0; padding: 0; }
+    .h-icons li { width: 18px; margin: 0 0 0 15px; padding: 0; line-height: 47px; float: left; }
+    .h-icons li:first-child { width: auto; margin: 0 10px 0 0; line-height: 49px; }
+    .h-icons li:first-child a { color: #FFF; font-size: 14px; font-weight: bold; letter-spacing: .4px; text-decoration: none; }
+    .h-icons svg { fill: #FFF; vertical-align: middle; }
+
+    @media (max-width: 750px) {
+        .h-icons li:first-child { display: none; }
+    }
+
+    @media (max-width: 640px) {
+        .h-nav li { margin: 0 15px 0 0; }
+        .h-nav li a { font-size: 15px; }
+        .h-icons { top: 17px; }
+        .h-icons li { width: 15px; margin: 0 0 0 12px; }
+        .h-hide { display: none; }
+    }
+</style>
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The footer at the very bottom of the screen --}}
+        <!--footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <nav class="site-footer-nav">
+                    <a href="{{@site.url}}">Latest Posts</a>
+                    <a href="https://github.com/holochain/holochain-rust/" target="_blank" rel="noopener">Github</a>
+                    {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
+                </nav>
+            </div>
+        </footer-->
+
+    </div>
+
+    {{!-- The big email subscribe modal content --}}
+    {{#if @labs.subscribers}}
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            {{#if @site.logo}}
+                <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+            {{/if}}
+            <h2 class="subscribe-overlay-title">Subscribe for updates</h2>
+            <p class="subscribe-overlay-description">Stories and progress from Holochain</p>
+            {{subscribe_form placeholder="Your email address"}}
+        </div>
+    </div>
+    {{/if}}
+
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+    </script>
+
+
+    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
+
+    {{#is "home"}}
+    {{else}}
+    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    {{/is}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>

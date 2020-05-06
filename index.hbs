@@ -1,0 +1,117 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> header background=@site.cover_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
+    <div class="inner">
+        <div class="site-header-content">
+            <!--img class="site-logo" src="/content/images/2019/09/holochain_logo_black.png" alt="{{@site.title}}" /-->
+            <h1>The<br><span>Holochain</span><br>Blog</h1>
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        </div>
+        {{> "site-nav"}}
+    </div>
+</header>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+    	<!--h2 class="main-heading">The Latest</h2-->
+
+        <div class="post-feed">
+            {{#foreach posts limit="7"}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+        <div class="post-categories">
+        	<div class="category-col category-tech">
+        		<h2><a href="/tag/tech/">Tech</a></h2>
+        		<ul>
+        			{{#get "posts" filter="tags:tech"}}
+	        			{{#foreach posts limit="4"}}
+
+				            {{> "post-list"}}
+
+			            {{/foreach}}
+		            {{/get}}
+		            
+        		</ul>
+        		<h3><a href="/tag/tech/">View All</a></h3>
+        	</div>
+        	<div class="category-col category-projects">
+        		<h2><a href="/tag/projects/">Projects</a></h2>
+        		<ul>
+        			{{#get "posts" filter="tags:projects"}}
+	        			{{#foreach posts limit="4"}}
+
+				            {{> "post-list"}}
+
+			            {{/foreach}}
+		            {{/get}}
+		            
+        		</ul>
+        		<h3><a href="/tag/projects/">View All</a></h3>
+        	</div>
+        	<div class="category-col category-community">
+        		<h2><a href="/tag/community/">Community</a></h2>
+        		<ul>
+        			{{#get "posts" filter="tags:community"}}
+	        			{{#foreach posts limit="4"}}
+
+				            {{> "post-list"}}
+
+			            {{/foreach}}
+		            {{/get}}
+		            
+        		</ul>
+        		<h3><a href="/tag/community/">View All</a></h3>
+        	</div>
+        	<div class="category-col category-foundation">
+        		<h2><a href="/tag/foundation/">Foundation</a></h2>
+        		<ul>
+        			{{#get "posts" filter="tags:foundation"}}
+	        			{{#foreach posts limit="4"}}
+
+				            {{> "post-list"}}
+
+			            {{/foreach}}
+		            {{/get}}
+		            
+        		</ul>
+        		<h3><a href="/tag/foundation/">View All</a></h3>
+        	</div>
+        </div>
+
+    </div>
+</main>
+
+<section class="subscribe-form">
+    <h3 class="subscribe-form-title">Subscribe for updates</h3>
+    <p>Stories and progress from the Holochain team</p>
+    
+    <form action="https://www.getdrip.com/forms/228623100/submissions" method="post" data-drip-embedded-form="228623100">
+    <div class="form-group"><input type="email" id="drip-email" class="subscribe-email" name="fields[email]" placeholder="Your email address" required></div>
+    <button type="submit"><span>Subscribe</span></button>
+    </form>
+
+</section>
+
+<div id="subscribe" class="subscribe-overlay">
+    <a class="subscribe-overlay-close" href="#"></a>
+    <div class="subscribe-overlay-content">
+            <img class="subscribe-overlay-logo" src="https://holochain.ghost.io/content/images/2019/05/holochain_logo_blog.png" alt="Holochain Blog"/>
+        <h2 class="subscribe-overlay-title">Subscribe for updates</h2>
+
+        <p class="subscribe-overlay-description">Stories and progress from Holochain</p>
+        <form action="https://www.getdrip.com/forms/228623100/submissions" method="post" data-drip-embedded-form="228623100">
+        <div class="form-group"><input type="email" id="drip-email" class="subscribe-email" name="fields[email]" placeholder="Your email address" required></div>
+        <button type="submit"><span>Subscribe</span></button>
+        </form>
+
+    </div>
+</div>
