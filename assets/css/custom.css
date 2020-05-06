@@ -297,3 +297,14 @@ body.tag-dev-pulse .hero-back {
     padding-left: 0;
     line-height: inherit;
 }
+
+@media (max-width: 640px) {
+    .site-footer-global-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .site-footer-global-nav__section {
+        flex-basis: 50%;
+    }
+}
+
