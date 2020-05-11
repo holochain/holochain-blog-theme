@@ -29,38 +29,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#620afd', endColorstr='#18bfda',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-/* See partials/header.hbs for explanation of this. */
-
-.responsive-header-img {
-    background-image: url({{img_url background size='xl'}});
-}
-@media(max-width: 1000px) {
-    .responsive-header-img {
-        background-image: url({{img_url background size='l'}});
-        background-image: -webkit-image-set(
-                url({{img_url background size='l'}}) 1x,
-                url({{img_url background size='xl'}}) 2x
-        );
-        background-image: image-set(
-                url({{img_url background size='l'}}) 1x,
-                url({{img_url background size='xl'}}) 2x
-        );
-    }
-}
-@media(max-width: 600px) {
-    .responsive-header-img {
-        background-image: url({{img_url background size='m'}});
-        background-image: -webkit-image-set(
-                url({{img_url background size='m'}}) 1x,
-                url({{img_url background size='l'}}) 2x
-        );
-        background-image: image-set(
-                url({{img_url background size='m'}}) 1x,
-                url({{img_url background size='l'}}) 2x
-        );
-    }
-}
-
 /* NEW */
 
 .site-header:after, .site-header:before { display: none; }
@@ -259,18 +227,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 /* end default.hbs */
-
-/* This originally lived in partials/post.hbs */
-
-.hero-back { background-image:url({{img_url feature_image size="xl"}}); }
-body.tag-dev-pulse .hero-back {
-    background-image:url({{img_url feature_image size="xl"}}), -webkit-linear-gradient(to right, #6000FF, #00EAD2);
-    background-image:url({{img_url feature_image size="xl"}}), -moz-linear-gradient(to right, #6000FF, #00EAD2);
-    background-image:url({{img_url feature_image size="xl"}}), -o-linear-gradient(to right, #6000FF, #00EAD2);
-    background-image:url({{img_url feature_image size="xl"}}), linear-gradient(to right, #6000FF, #00EAD2);
-}
-
-/* end partials/post.hbs */
 
 /* Page footer */
 
