@@ -3,12 +3,6 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<!--header class="site-header outer">
-    <div class="inner">
-        {{> "site-nav"}}
-    </div>
-</header-->
-
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
@@ -72,7 +66,7 @@ into the {body} of the default.hbs template --}}
                 <div id="disqus_thread"></div>
                 <script>
                 var disqus_config = function () {
-                    this.page.url = "{{url absolute="true"}}";  
+                    this.page.url = "{{url absolute="true"}}";
                     this.page.identifier = "ghost-{{comment_id}}"
                 };
                 (function() {
@@ -103,12 +97,12 @@ into the {body} of the default.hbs template --}}
             <section class="subscribe-form">
                 <h3 class="subscribe-form-title">Subscribe for updates</h3>
                 <p>Stories and progress from the Holochain team</p>
-                
+
                 <form action="https://www.getdrip.com/forms/228623100/submissions" method="post" data-drip-embedded-form="228623100">
                 <div class="form-group"><input type="email" id="drip-email" class="subscribe-email" name="fields[email]" placeholder="Your email address" required></div>
                 <button type="submit"><span>Subscribe</span></button>
                 </form>
-    
+
             </section>
 
             <footer class="post-full-footer">
