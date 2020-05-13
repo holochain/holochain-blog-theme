@@ -215,7 +215,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .h-icons svg { fill: #FFF; vertical-align: middle; }
 
 @media (max-width: 750px) {
-    .h-icons li:first-child { display: none; }
+    .h-icons { display: none; }
 }
 
 @media (max-width: 640px) {
