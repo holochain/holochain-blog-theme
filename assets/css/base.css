@@ -582,15 +582,18 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
 }
 
-.reading-time {
-    flex-shrink: 0;
-    margin-left: 20px;
+.post-details {
     color: var(--midgrey);
     font-size: 1.2rem;
     line-height: 33px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+}
+
+.post-card .post-details {
+    flex-shrink: 0;
+    margin-left: 20px;
 }
 
 /* Special Styling for home page grid (below):
@@ -1590,7 +1593,8 @@ Usage (In Ghost editor):
 
 .read-next-card-content li {
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
+    border-bottom: rgba(255,255,255,0.3) 1px solid;
     font-size: 1.6rem;
     line-height: 1.25em;
     font-weight: 200;
@@ -1599,8 +1603,6 @@ Usage (In Ghost editor):
 
 .read-next-card-content li a {
     display: block;
-    padding: 20px 0;
-    border-bottom: rgba(255,255,255,0.3) 1px solid;
     color: #fff;
     font-weight: 500;
     vertical-align: top;
