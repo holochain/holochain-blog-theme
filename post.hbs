@@ -150,7 +150,7 @@ into the {body} of the default.hbs template --}}
                     <div class="read-next-card-content">
                         <ul>
                             {{#foreach related_posts}}
-                            <li><a href="{{url}}">{{title}}</a></li>
+                            <li><a href="{{url}}">{{title}}</a> <span class="post-details"><span class="publish-date">{{date format="DD MMM YYYY"}}</span> &middot; <span class="reading-time">{{reading_time}}</span></span></li>
                             {{/foreach}}
                         </ul>
                     </div>
