@@ -1322,12 +1322,12 @@ Usage (In Ghost editor):
     line-height: 1.3em;
 }
 
-.post-full-footer-right {
+.author-card-read-more {
     flex-shrink: 0;
     margin-left: 20px;
 }
 
-.author-card-button {
+.author-card-read-more-button {
     display: block;
     padding: 9px 16px;
     border: color(var(--midgrey) l(+20%)) 1px solid;
