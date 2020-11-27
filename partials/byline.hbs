@@ -1,0 +1,10 @@
+{{!-- There are two options for how we display the byline/author-info.
+If the post has more than one author, we load a specific template
+from includes/byline-multiple.hbs, otherwise, we just use the
+default byline. --}}
+
+{{#has author="count:>1"}}
+    {{> "byline-multiple" show_read_more=show_read_more}}
+{{else}}
+    {{> "byline-single" show_read_more=show_read_more}}
+{{/has}}

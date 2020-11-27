@@ -16,8 +16,10 @@
         {{/if}}
     </section>
 </section>
-<div class="author-card-read-more">
-    <a class="author-card-read-more-button" href="{{url}}">Read More</a>
-</div>
+{{#if show_read_more}}
+    <div class="author-card-read-more">
+        <a class="author-card-read-more-button" href="{{url}}">Read More</a>
+    </div>
+{{/if}}
 
 {{/primary_author}}
