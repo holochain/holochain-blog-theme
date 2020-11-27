@@ -68,6 +68,22 @@ into the {body} of the default.hbs template --}}
                 </div>
             </section>
 
+            <footer class="post-full-footer">
+
+                {{!-- There are two options for how we display the byline/author-info.
+                If the post has more than one author, we load a specific template
+                from includes/byline-multiple.hbs, otherwise, we just use the
+                default byline. --}}
+
+                {{#has author="count:>1"}}
+                    {{> "byline-multiple"}}
+                {{else}}
+                    {{> "byline-single"}}
+                {{/has}}
+
+            </footer>
+
+
             <section class="post-full-comments">
 
             	<div class="widget-feedback">
@@ -120,21 +136,6 @@ into the {body} of the default.hbs template --}}
                 </form>
 
             </section>
-
-            <footer class="post-full-footer">
-
-                {{!-- There are two options for how we display the byline/author-info.
-                If the post has more than one author, we load a specific template
-                from includes/byline-multiple.hbs, otherwise, we just use the
-                default byline. --}}
-
-                {{#has author="count:>1"}}
-                    {{> "byline-multiple"}}
-                {{else}}
-                    {{> "byline-single"}}
-                {{/has}}
-
-            </footer>
 
         </article>
 
