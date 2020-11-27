@@ -11,15 +11,11 @@
         <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
         {{#if bio}}
             <p>{{bio}}</p>
-        {{else}}
-            <p>Read <a href="{{url}}">more posts</a> by this author.</p>
         {{/if}}
+        {{#unless ../hide_read_more}}
+            <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+        {{/unless}}
     </section>
 </section>
-{{#if show_read_more}}
-    <div class="author-card-read-more">
-        <a class="author-card-read-more-button" href="{{url}}">Read More</a>
-    </div>
-{{/if}}
 
 {{/primary_author}}

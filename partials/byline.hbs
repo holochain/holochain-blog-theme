@@ -4,7 +4,7 @@ from includes/byline-multiple.hbs, otherwise, we just use the
 default byline. --}}
 
 {{#has author="count:>1"}}
-    {{> "byline-multiple" show_read_more=show_read_more}}
+    {{> "byline-multiple" hide_read_more=hide_read_more}}
 {{else}}
-    {{> "byline-single" show_read_more=show_read_more}}
+    {{> "byline-single" hide_read_more=hide_read_more}}
 {{/has}}
