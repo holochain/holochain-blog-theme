@@ -44,7 +44,8 @@
 .feature-header h1 { max-width: 1000px; }
 .feature-excerpt { margin-bottom: 15px; font-size: 3.5rem; letter-spacing: -1px; }
 .feature-date { margin-bottom: 80px; font-size: 2.2rem; letter-spacing: -.2px; opacity: .6; }
-.feature-header * { color: #FFF; }
+/* Fighting some pretty strong specificity in other stylesheets here */
+.feature-header *, .feature-header .author-card-name a, .post-full-authors-content p, .post-full-authors-content a { color: #FFF; }
 .post-title-container { visibility: hidden; position: absolute; }
 .post-card-excerpt { position: absolute; bottom: 22px; left: 25px; font-size: 18px; color: #FFF; font-weight: 600; z-index: 3; }
 .post-card-header h2 { margin-bottom: 1em; }
