@@ -719,25 +719,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     overflow: hidden;
 }
 
-.post-full-image img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-}
-
 @media (max-width: 1170px) {
     .post-full-image {
         margin: 0 -4vw -100px;
         border-radius: 0;
-    }
-    .post-full-image img {
-        height: 600px;
-    }
-}
-
-@media (max-width: 800px) {
-    .post-full-image img {
-        height: 400px;
     }
 }
 
@@ -1086,6 +1071,13 @@ Usage (In Ghost editor):
     box-shadow: none !important;
 }
 
+@media (max-width: 650px) {
+    .post-full-image {
+        margin-bottom: 4vw;
+        height: 350px;
+    }
+}
+
 /* Some grouped styles for smaller viewports */
 @media (max-width: 500px) {
     .post-full-meta {
@@ -1094,10 +1086,6 @@ Usage (In Ghost editor):
     }
     .post-full-title {
         font-size: 2.9rem;
-    }
-    .post-full-image {
-        margin-bottom: 4vw;
-        height: 350px;
     }
     .post-full-content {
         padding: 0;
