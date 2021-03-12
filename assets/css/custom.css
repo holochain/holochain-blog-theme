@@ -129,8 +129,8 @@ background: -webkit-linear-gradient(45deg,  #6600ff 0%,#4a45f0 30%,#0dddd4 100%)
 background: linear-gradient(45deg,  #6600ff 0%,#4a45f0 30%,#0dddd4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6600ff', endColorstr='#0dddd4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-body.tag-dev-pulse .hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
-body.tag-dev-pulse .hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: .3;
+.hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
+.hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: .3;
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7300ff+0,00ead2+100 */
 background: #7300ff; /* Old browsers */
 background: -moz-linear-gradient(left,  #7300ff 0%, #00ead2 100%); /* FF3.6-15 */
