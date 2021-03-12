@@ -10,11 +10,7 @@ into the {body} of the default.hbs template --}}
 
     {{#if feature_image}}
     <style>
-    .hero-back { background-image:url({{img_url feature_image size="xl"}}); }
-    body.tag-dev-pulse .hero-back {
-        background-image:url({{img_url feature_image size="xl"}}), -webkit-linear-gradient(to right, #6000FF, #00EAD2);
-        background-image:url({{img_url feature_image size="xl"}}), -moz-linear-gradient(to right, #6000FF, #00EAD2);
-        background-image:url({{img_url feature_image size="xl"}}), -o-linear-gradient(to right, #6000FF, #00EAD2);
+    .hero-back {
         background-image:url({{img_url feature_image size="xl"}}), linear-gradient(to right, #6000FF, #00EAD2);
     }
     </style>
