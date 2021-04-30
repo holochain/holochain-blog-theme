@@ -49,7 +49,6 @@
     font-style:italic;
     font-display:swap
 }
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * { font-family: Mulish !important; }
 h1, h2, h3, h4 { font-family: 'URW Form' !important; font-weight: 500; }
