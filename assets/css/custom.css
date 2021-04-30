@@ -51,7 +51,7 @@
 }
 
 * { font-family: Mulish !important; }
-h1, h2, h3, h4 { font-family: 'URW Form' !important; font-weight: 500; }
+h1, h2, h3 { font-family: 'URW Form' !important; font-weight: 800; }
 .site-header { background: none; }
 .post-template .site-header:before, .post-template .site-header:after { display: none !important; }
 .site-nav-logo { padding: 0; }
