@@ -13,6 +13,9 @@
             src="{{img_url feature_image size="m"}}"
             alt="{{title}}"
         />
+        {{#has number="1"}}
+            <h2 class="post-card-title">{{title}}</h2>
+        {{/has}}
         <section class="post-card-excerpt">{{excerpt words="33"}}</section>
     </a>
     {{/if}}
@@ -20,9 +23,13 @@
     <div class="post-card-content">
 
         <a class="post-card-content-link" href="{{url}}">
-            <header class="post-card-header">
-                <h2 class="post-card-title">{{title}}</h2>
-            </header>
+            {{#has number="1"}}
+                {{!-- Post card title is on the image for the featured post; we still keep this link here for a nice fat click target --}}
+            {{else}}
+                <header class="post-card-header">
+                    <h2 class="post-card-title">{{title}}</h2>
+                </header>
+            {{/has}}
         </a>
 
         <footer class="post-card-meta">

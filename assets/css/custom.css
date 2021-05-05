@@ -50,8 +50,8 @@
     font-display:swap
 }
 
-* { font-family: Mulish !important; }
-h1, h2, h3 { font-family: 'URW Form' !important; font-weight: 800; }
+body { font-family: Mulish; }
+h1, h2, h3, .feature-excerpt { font-family: 'URW Form' !important; font-weight: 800; }
 .site-header { background: none; }
 .post-template .site-header:before, .post-template .site-header:after { display: none !important; }
 .site-nav-logo { padding: 0; }
@@ -60,7 +60,7 @@ h1, h2, h3 { font-family: 'URW Form' !important; font-weight: 800; }
 .post-card h2 { font-size: 2.35rem; }
 .post-card-image { height: 220px; }
 .post-card-tags { padding: 13px 25px; margin: 0; font-size: 1.4rem; line-height: 1.1em; color: #FFF; font-weight: 700; background-color: #2F1F62; position: absolute; bottom: 0; left: 0; text-transform: none; }
-.post-full-content { font-size: 1.8rem; letter-spacing: -.3px; }
+.post-full-content { font-size: 1.8rem; }
 .post-full-content:after, .post-full-content:before { display: none !important; }
 .inner { max-width: 1200px; }
 .post-template .site-main .inner { max-width: 1000px; }
@@ -110,7 +110,7 @@ h1, h2, h3 { font-family: 'URW Form' !important; font-weight: 800; }
 .featured-tags a:hover { text-decoration: none; color: #00FFCE; }
 
 @media (min-width: 1200px) {
-     h1.feature-title { font-size: 8rem; line-height: 1; font-weight: 800; }
+     h1.feature-title { font-size: 8rem; line-height: 1; font-weight: 800; letter-spacing: -0.2em }
 }
 @media (max-width: 1199px) {
      h1.feature-title { font-size: 7rem; line-height: 1; font-weight: 800; }
@@ -162,19 +162,46 @@ h1, h2, h3 { font-family: 'URW Form' !important; font-weight: 800; }
 .read-next-card:before { display: none; }
 .site-header-content .author-profile-image { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; }
 .site-header-content .author-meta { display: none !important; }
+.post-card-large .post-card-title {
+    position: relative;
+    z-index: 3;
+    top: 40px;
+    left: 40px;
+    font-size: 3em;
+}
+.post-card-large .post-card-excerpt {
+    position: relative;
+    bottom: auto;
+    left: 40px;
+    font-size: 2em;
+    margin-top: 1.5em;
+}
 .post-card.tag-dev-pulse .post-card-image-link:before { content: ''; width: 100%; height: 100px; position: absolute; bottom: 0; left: 0; opacity: .6; z-index: 1;
 background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 }
 .post-card.tag-dev-pulse .post-card-image-link:after { content: ''; width: 100%; height: 7px; position: absolute; bottom: 0; left: 0; z-index: 2;
 background: linear-gradient(45deg,  #6600ff 0%,#4a45f0 30%,#0dddd4 100%);
 }
-.hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
-.hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: .3;
+
+/* Art direction */
+
+/* First of all, the default style -- add a colour wash to the hero image */
+body:not(.tag-hash-art-black, .tag-hash-art-white) .hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
+body:not(.tag-hash-art-black, .tag-hash-art-white) .hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: .3;
 background: linear-gradient(to right,  #7300ff 0%,#00ead2 100%);
 }
-body.tag-projects .hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+body:not(.tag-hash-art-black, .tag-hash-art-white) .tag-projects .hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0;
 background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,1) 100%);
 }
+
+/* Now, for the black hero image style! */
+/* Note that the shadow is pure black. */
+.tag-hash-art-black .post-card-image-link *, .tag-hash-art-black .feature-header * { color: #fff !important; text-shadow: 0 0 0.5em #000, 0 0 0.25em #000, 0 0 .125em #000; }
+
+/* And the white hero image style. */
+.tag-hash-art-white .post-card-image-link *, .tag-hash-art-white .feature-header * { color: #15171a !important; text-shadow: 0 0 0.5em #fff, 0 0 0.25em #fff, 0 0 .125em #fff; }
+
+
 @media (max-width: 700px) {
     .site-header-content .author-profile-image { position: relative; right: auto; top: auto; transform: none; display: table; margin: 0 auto 20px; }
 }
@@ -231,7 +258,7 @@ background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,1) 100%
 
 /* This originally lived in the default.hbs file, in the <body> element. */
 
-.h-banner { width: 100%; height: 50px; background: #2F1F62; z-index: 100; font-family: Mulish; position: relative; }
+.h-banner { width: 100%; height: 50px; background: #2F1F62; z-index: 100; position: relative; }
 .h-wrap { width: 100%; max-width: 1200px; position: relative; margin: auto; }
 .h-pad { padding: 0 4vw; }
 .h-nav { list-style: none; margin: 0; padding: 0; float: left; }
