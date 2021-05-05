@@ -162,6 +162,20 @@ h1, h2, h3, .feature-excerpt { font-family: 'URW Form' !important; font-weight: 
 .read-next-card:before { display: none; }
 .site-header-content .author-profile-image { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; }
 .site-header-content .author-meta { display: none !important; }
+.post-card-large .post-card-title {
+    position: relative;
+    z-index: 3;
+    top: 40px;
+    left: 40px;
+    font-size: 3em;
+}
+.post-card-large .post-card-excerpt {
+    position: relative;
+    bottom: auto;
+    left: 40px;
+    font-size: 2em;
+    margin-top: 1.5em;
+}
 .post-card.tag-dev-pulse .post-card-image-link:before { content: ''; width: 100%; height: 100px; position: absolute; bottom: 0; left: 0; opacity: .6; z-index: 1;
 background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 }
