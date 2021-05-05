@@ -425,7 +425,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     color: var(--darkgrey);
 }
 
-.post-card-content-link:hover {
+.post-card-content-link:hover, .post-card-image-link:hover {
     text-decoration: none;
 }
 
