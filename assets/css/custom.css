@@ -110,7 +110,7 @@ h1, h2, h3, .feature-excerpt { font-family: 'URW Form' !important; font-weight: 
 .featured-tags a:hover { text-decoration: none; color: #00FFCE; }
 
 @media (min-width: 1200px) {
-     h1.feature-title { font-size: 8rem; line-height: 1; font-weight: 800; letter-spacing: -0.2em }
+     h1.feature-title { font-size: 8rem; line-height: 1; font-weight: 800; letter-spacing: -0.02em }
 }
 @media (max-width: 1199px) {
      h1.feature-title { font-size: 7rem; line-height: 1; font-weight: 800; }
