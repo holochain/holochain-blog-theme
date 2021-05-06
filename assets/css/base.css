@@ -595,17 +595,25 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 /* Special Styling for home page grid (below):
 
 The first post in the list is styled to be bigger than the others and take over
-the full width of the grid to give it more emphasis. Wrapped in a media query to
-make sure this only happens on large viewports / desktop-ish devices.
+the full width of the grid to give it more emphasis. Originally this was wrapped
+in a media query to make sure this only happens on large viewports / desktop-ish
+devices, but really we want the first post to always be large -- what we really
+want is for others to only be smaller (two columns) at larger viewports.
 
  */
 
-@media (min-width: 795px) {
-    .post-card-large {
-        flex: 1 1 100%;
-        flex-direction: row;
-    }
+.post-card-large {
+    flex: 1 1 100%;
+    flex-direction: row;
+}
 
+@media (max-width: 795px) {
+    .post-card-large {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 795px) {
     .post-card-large .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
@@ -619,7 +627,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-large .post-card-content {
-        flex: 0 1 357px;
+        flex: 1 0 340px;
     }
 
     .post-card-large h2 {
