@@ -11,7 +11,7 @@ into the {body} of the default.hbs template --}}
     {{#if feature_image}}
     <style>
     .hero-back {
-        background-image:url({{img_url feature_image size="xl"}}){{#has tag="hash-art-white,hash-art-black"}}{{!-- no background gradient for art-directed hero images }}{{else}}, linear-gradient(to right, #6000FF, #00EAD2){{/has}};
+        background-image:url({{img_url feature_image size="xl"}}){{#has tag="hash-art-white,hash-art-black"}}{{!-- no background gradient for art-directed hero images --}}{{else}}, linear-gradient(to right, #6000FF, #00EAD2){{/has}};
     }
     </style>
     <div class="post-full-image">
