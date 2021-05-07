@@ -163,6 +163,7 @@ h1, h2, h3, .feature-excerpt { font-family: 'URW Form' !important; font-weight: 
 .site-header-content .author-profile-image { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; }
 .site-header-content .author-meta { display: none !important; }
 .post-card-large .post-card-title {
+    color: #fff;
     position: relative;
     margin: 40px 40px 0;
     font-size: 3em;
