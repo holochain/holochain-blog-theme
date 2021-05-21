@@ -64,8 +64,9 @@ function js(done) {
 
 function zipper(done) {
     const targetDir = 'dist/';
-    const themeName = require('./package.json').name;
-    const filename = themeName + '.zip';
+    const package = require('./package.json');
+    const themeName = package.name;
+    const filename = package.name + '-' + package.version + '.zip';
 
     pump([
         src([
