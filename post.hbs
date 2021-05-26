@@ -230,6 +230,27 @@ $(document).ready(function () {
 
     update();
 
+    // Fade hero on scroll
+
+    // Hero opacity varies by art direction.
+    // Get the opacity directly from the initial style.
+    var startOpacity = parseFloat($('.hero-back').css('opacity'));
+    $(window).scroll(function(){
+        $('.hero-back').css("opacity", startOpacity - $(window).scrollTop() / 1000);
+    });
+
+    // External links open in a new tab.
+
+    $('#site-main a').each(function() {
+        var a = new RegExp('/' + window.location.host + '/');
+        if(!a.test(this.href)) {
+            $(this).click(function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(this.href, '_blank');
+            });
+        }
+    });
 });
 </script>
 {{/contentFor}}
