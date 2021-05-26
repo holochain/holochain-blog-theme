@@ -214,7 +214,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image { background
 .tag-hash-art-white .post-full-image {  background: #d5e3ea; }
 
 /* Lastly, the 'clear' art direction style -- no washes on the hero, no shadows on the text. */
-.tag-hash-art-clear { text-shadow: none !important; }
+.tag-hash-art-clear .post-card-image-link *, .tag-hash-art-clear .feature-header * { text-shadow: none !important; }
 .tag-hash-art-clear .hero-back { opacity: 1 !important; }
 .tag-hash-art-clear .hero-back:after { display: none !important; }
 .tag-hash-art-clear .post-full-image { background: transparent none !important; }
