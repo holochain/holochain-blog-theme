@@ -204,13 +204,11 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image { background
 /* Now, for the black hero image style! */
 /* Just in case there are strong details in the low-key image, dial them back a bit. */
 .tag-hash-art-black .hero-back:after { opacity: 0.5; background: #000; }
-.tag-hash-art-black { color: #fff !important; }
 /* Note that the shadow is pure black. */
-.tag-hash-art-black .post-card-image-link *, .tag-hash-art-black .feature-header * {  text-shadow: 0 0 0.5em #000, 0 0 0.25em #000, 0 0 .125em #000; }
+.tag-hash-art-black .post-card-image-link *, .tag-hash-art-black .feature-header * { color: #fff !important; text-shadow: 0 0 0.5em #000, 0 0 0.25em #000, 0 0 .125em #000; }
 
 /* And the white hero image style. */
-.tag-hash-art-white { color: #15171a !important; }
-.tag-hash-art-white .post-card-image-link *, .tag-hash-art-white .feature-header * { text-shadow: 0 0 0.5em #fff, 0 0 0.25em #fff, 0 0 .125em #fff; }
+.tag-hash-art-white .post-card-image-link *, .tag-hash-art-white .feature-header * { color: #15171a !important; text-shadow: 0 0 0.5em #fff, 0 0 0.25em #fff, 0 0 .125em #fff; }
 .tag-hash-art-white .post-full-image {  background: #d5e3ea; }
 
 /* Lastly, the 'clear' art direction style -- no washes on the hero, no shadows on the text. */
