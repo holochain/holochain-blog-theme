@@ -194,8 +194,8 @@ background: linear-gradient(45deg,  #6600ff 0%,#4a45f0 30%,#0dddd4 100%);
 /* Art direction */
 
 /* First of all, the default style -- add a colour wash to the hero image */
-body:not(.tag-hash-art-black, .tag-hash-art-white, .tag-hash-art-clear) .hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
 .hero-back:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+body:not(.tag-hash-art-black, .tag-hash-art-white, .tag-hash-art-clear) .hero-back { background-blend-mode: color-dodge; filter: contrast(1.3); }
 body:not(.tag-hash-art-black, .tag-hash-art-white, .tag-hash-art-clear) .hero-back:after {opacity: .3; background: linear-gradient(to right,  #7300ff 0%,#00ead2 100%); }
 
 /* This one is actually good for both the default and black images, but not so much for white images. */
