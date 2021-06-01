@@ -6,4 +6,3 @@ Disallow: /p/
 User-agent: Twitterbot
 Sitemap: https://blog.holochain.org/sitemap.xml
 Disallow: /ghost/
-Disallow: /p/
