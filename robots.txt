@@ -1,5 +1,4 @@
 User-agent: Twitterbot
-Sitemap: https://blog.holochain.org/sitemap.xml
 Disallow: /ghost/
 
 User-agent: *
