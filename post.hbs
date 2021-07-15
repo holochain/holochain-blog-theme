@@ -251,6 +251,12 @@ $(document).ready(function () {
             });
         }
     });
+
+    // Add anchor links to headings.
+    $('.post-content h1, .post-content h2, .post-content h3').each(function(i, h) {
+        var $a = $('<a href="#' + h.id + '" class="heading-anchor">§</a>');
+        $(h).prepend($a);
+    });
 });
 </script>
 {{/contentFor}}

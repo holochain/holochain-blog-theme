@@ -302,6 +302,28 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image { background
 
 /* end default.hbs */
 
+/* Anchor links on headers -- injected via JavaScript */
+.post-full-content h1, .post-full-content h2, .post-full-content h3 {
+    position: relative;
+    /* This makes the hover target bigger so the anchor link doesn't disappear when you move toward it. */
+    left: -1em;
+    padding-left: 1em;
+}
+
+.heading-anchor {
+    position: absolute;
+    left: 0;
+    width: 1em;
+    color: #bbb !important;
+    box-shadow: none !important;
+    text-align: center;
+    visibility: hidden;
+}
+
+.post-full-content h1:hover .heading-anchor, .post-full-content h2:hover .heading-anchor, .post-full-content h3:hover .heading-anchor {
+    visibility: visible;
+}
+
 /* Page footer */
 
 .site-footer-global-nav {
