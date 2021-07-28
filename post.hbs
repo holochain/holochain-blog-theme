@@ -240,17 +240,7 @@ $(document).ready(function () {
     });
 
     // External links open in a new tab.
-
-    $('#site-main a').each(function() {
-        var a = new RegExp('/' + window.location.host + '/');
-        if(!a.test(this.href)) {
-            $(this).click(function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                window.open(this.href, '_blank');
-            });
-        }
-    });
+    $('#site-main a:not([href*="//' + window.location.host + '"]):not([href^="/"])').attr('target', '_blank');
 
     // Add anchor links to headings.
     $('.post-content h1, .post-content h2, .post-content h3').each(function(i, h) {
