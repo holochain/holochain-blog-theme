@@ -1836,6 +1836,8 @@ Usage (In Ghost editor):
     flex-direction: column;
     align-items: center;
     max-width: 920px;
+    position: relative;
+    z-index: 0;
 }
 
 .post-template .post-content > p:first-child {

@@ -6,28 +6,24 @@ into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<main id="site-main" class="site-main outer">
-
-    {{#if feature_image}}
-    <style>
-    .hero-back {
-        background-image:url({{img_url feature_image size="xl"}}){{^has tag="#art-white,#art-black,#art-clear"}}, linear-gradient(to right, #6000FF, #00EAD2){{/has}};
-    }
-    </style>
-    <div class="post-full-image">
-        <header class="feature-header">
-            <div class="inner">
-                <h1 class="feature-title">{{title}}</h1>
-                <div class="feature-excerpt">{{excerpt}}</div>
-                <div class="feature-date">Posted {{date format="D MMMM YYYY"}}</div>
-                <div class="post-full-byline">
-                    {{> "byline" hide_read_more=1}}
-                </div>
-            </div>
-        </header>
-        <div class="hero-back"></div>
+{{#if feature_image}}
+    <div class="featured-no-overlay">
+        <img class="feature-image" src="{{img_url feature_image size="xl"}}" alt="">
     </div>
-    {{/if}}
+{{/if}}
+
+<main id="site-main" class="site-main no-overlay outer">
+
+    <header class="post-header">
+        <div class="inner">
+            <h1 class="feature-title">{{title}}</h1>
+            <div class="feature-excerpt">{{excerpt}}</div>
+            <div class="feature-date">Posted {{date format="D MMMM YYYY"}}</div>
+            <div class="post-full-byline">
+                {{> "byline" hide_read_more=1}}
+            </div>
+        </div>
+    </header>
 
     <div class="inner">
 

@@ -1,4 +1,4 @@
-<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has number="1"}}post-card-large{{/has}}{{/is}}{{/unless}}">
+<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#has number="1"}}post-card-large{{/has}}{{/unless}}">
 
     {{#if feature_image}}
     <a class="post-card-image-link" href="{{url}}">
@@ -13,29 +13,20 @@
             src="{{img_url feature_image size="m"}}"
             alt="{{title}}"
         />
-        {{#has number="1"}}
-            <h2 class="post-card-title">{{title}}</h2>
-        {{/has}}
-        <section class="post-card-excerpt">{{excerpt words="33"}}</section>
     </a>
     {{/if}}
 
     <div class="post-card-content">
 
         <a class="post-card-content-link" href="{{url}}">
-            {{#has number="1"}}
-                {{!-- Post card title is on the image for the featured post; we still keep this link here for a nice fat click target --}}
-            {{else}}
-                <header class="post-card-header">
-                    <h2 class="post-card-title">{{title}}</h2>
-                </header>
-            {{/has}}
+            <h2 class="post-card-title">{{title}}</h2>
+            <section class="post-card-excerpt">{{excerpt words="33"}}</section>
         </a>
 
         <footer class="post-card-meta">
 
             <ul class="author-list">
-            {{#foreach authors}}
+            {{#foreach authors visibility="all"}}
                 <li class="author-list-item">
 
                     <div class="author-name-tooltip">
@@ -53,7 +44,11 @@
             {{/foreach}}
             </ul>
 
-            <span class="post-details"><span class="publish-date">{{date format="DD MMM YYYY"}}</span> &middot; <span class="reading-time">{{reading_time}}</span></span>
+            <span class="post-details">
+                <span class="authors">{{#has author="count:>2"}}Holochain{{else}}{{authors}}{{/has}}</span>
+                <span class="publish-date">{{date format="DD MMM YYYY"}}</span>  
+                <span class="reading-time">{{reading_time}}</span>
+            </span>
 
         </footer>
 

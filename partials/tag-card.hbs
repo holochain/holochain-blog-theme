@@ -1,0 +1,31 @@
+{{!-- Tag Card --}}
+{{#get "tags" filter='accent_color:[#111111,#222222,#333333,#444444,#555555,#666666]' order='accent_color asc'}}
+    {{#foreach tags limit="6" visibility="all"}}
+        <div class="post-card tag-card-{{@number}}">
+            <div class="tag-card-top">
+                <a class="tag-image" href="{{url}}">
+                    {{#if feature_image}}
+                        <img src="{{feature_image}}" alt="">
+                    {{/if}}
+                    <h2>{{name}}</h2>
+                </a>
+            </div>
+            <div class="tag-card-bottom">
+                <div class="latest-post">
+                {{#get "posts" filter='tag:{{slug}}'}}
+                    {{#foreach posts limit='1' visibility="all"}}
+                        <h3 class="latest"><span>{{t 'Latest: '}}</span><a class="title" href='{{url}}'>{{title}}</a></h3>
+
+                        <span class="post-details">
+                            <span class="publish-date">{{date format="DD MMM YYYY"}}</span> 
+                            &middot; 
+                        <span class="reading-time">{{reading_time}}</span>
+                        </span>
+                    {{/foreach}}
+                {{/get}}
+                </div>
+                <div class="read-all"><a href="{{@site.url}}/tag/{{slug}}/">{{t "Explore more"}}</a></div>
+            </div>
+        </div>
+    {{/foreach}}
+{{/get}}

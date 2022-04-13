@@ -44,13 +44,18 @@
     <div class="inner">
 
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#foreach posts visibility="all"}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
             {{/foreach}}
         </div>
+
+        {{!-- Load More Posts --}}
+		<div class="load-more">
+			<button class="js-load-posts"></button>
+		</div>
 
     </div>
 </main>

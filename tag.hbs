@@ -2,7 +2,9 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#tag}}
-{{> header background=feature_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
+{{> header}} 
+{{!-- {{> header background=feature_image}}  --}}
+{{!--Special header.hbs partial to generate the <header> tag--}}
     <div class="inner">
         <div class="site-header-content">
             <!--img class="site-logo" src="/content/images/2019/09/holochain_logo_black.png" alt="{{@site.title}}" /-->
@@ -18,11 +20,15 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#foreach posts visibility="all"}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
             {{/foreach}}
         </div>
+        {{!-- Load More Posts --}}
+		<div class="load-more">
+			<button class="js-load-posts"></button>
+		</div>
     </div>
 </main>
 
