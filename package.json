@@ -22,10 +22,19 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Anisul Kibria",
-        "email": "a@anisul.com",
-        "url": "http://anisul.com"
+	"name": "Klaye Morrison"
     },
+    "contributors": [
+	{
+            "name": "Paul d'Aoust",
+	    "email": "paul.daoust@holo.host"
+	},
+	{
+            "name": "Anisul Kibria",
+            "email": "a@anisul.com",
+            "url": "http://anisul.com"
+	}
+    ],
     "gpm": {
         "type": "theme",
         "categories": [
