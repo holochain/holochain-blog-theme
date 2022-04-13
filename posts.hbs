@@ -1,0 +1,38 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> header background=@site.cover_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
+    <div class="inner">
+        <div class="site-header-content">
+            <h1><span class="normal">Holochain</span> All Posts</h1>
+            {{!-- <a class="subscribe-button" href="#subscribe">Subscribe</a> --}}
+        </div>
+        {{!-- {{> "site-nav"}} --}}
+    </div>
+</header>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+    	<!--h2 class="main-heading">The Latest</h2-->
+
+        <div class="post-feed all-posts">
+            {{#foreach posts limit="7" visibility="all"}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+		{{!-- Load More Posts --}}
+		<div class="load-more">
+			<button class="js-load-posts"></button>
+		</div>
+
+    </div>
+</main>
+
+{{> subscriber-form}}

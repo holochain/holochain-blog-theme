@@ -1,0 +1,37 @@
+<div id="search-section" class="search-section">
+	
+	<div id="search-content" class="search-content">
+
+		<span id="search-close" class="search-close">{{>icons/close}}</span>
+
+		<div class="search-bg">
+
+			<form class="search-form" onsubmit="return false">
+				<input id="search-input" type="text" placeholder="{{t "Type your keywords"}}">
+				<div class="search-meta">
+					<span id="search-info" class="search-info">{{t ""}}</span>
+					<span id="search-counter" class="search-counter is-hide">
+						<span id="search-counter-results">0</span>
+						<span>{{t "Results for your search"}}</span>
+					</span>
+				</div>
+			</form>
+
+			<div id="search-results" class="search-results"></div>
+
+		</div>
+
+	</div>
+
+	<div id="search-overlay" class="search-overlay"></div>
+	
+</div>
+
+{{#contentFor "search_js"}}
+<script>
+const searchPublished = '{{t "Published"}}',
+	  searchUrl = '{{@site.url}}',
+	  searchKey = {{>search_api_key}},
+	  searchAPI = searchUrl+'/ghost/api/v3/content/posts/?key='+searchKey+'&limit=all&formats=plaintext&fields=url,title,published_at,excerpt,plaintext,visibility';
+</script>
+{{/contentFor}}

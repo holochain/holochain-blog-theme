@@ -1,11 +1,11 @@
 {
-    "name": "casper-holochain",
+    "name": "holochain",
     "description": "The modified Casper theme for blog.holochain.org",
     "demo": "https://blog.holochain.org",
-    "version": "2.12.8",
+    "version": "2.13.4",
     "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
     },
     "license": "MIT",
     "screenshots": {
@@ -22,8 +22,19 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Klaye Morrison"
+	"name": "Klaye Morrison"
     },
+    "contributors": [
+	{
+            "name": "Paul d'Aoust",
+	    "email": "paul.daoust@holo.host"
+	},
+	{
+            "name": "Anisul Kibria",
+            "email": "a@anisul.com",
+            "url": "http://anisul.com"
+	}
+    ],
     "gpm": {
         "type": "theme",
         "categories": [
@@ -59,7 +70,7 @@
         "pump": "3.0.0"
     },
     "config": {
-        "posts_per_page": 25,
+        "posts_per_page": 7,
         "image_sizes": {
             "xxs": {
                 "width": 30
