@@ -62,6 +62,7 @@
         "gulp": "4.0.1",
         "gulp-livereload": "4.0.1",
         "gulp-postcss": "8.0.0",
+        "gulp-terser": "^2.1.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "4.2.0",
         "postcss-color-function": "4.1.0",
