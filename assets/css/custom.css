@@ -446,12 +446,29 @@ a, button {
   margin-top: 0 !important;
 }
 
-.site-header-content h1 {
+.site-header-content {
   color: #15171a;
+}
+
+.site-header-content h1 {
   font-weight: 900;
   font-size: 5.5rem;
   letter-spacing: -0.4px;
   margin: 0;
+}
+
+.site-header-content .tag-description {
+  font-size: 2rem;
+  margin-top: 1em;
+  /* Make room for the subscribe button. Besides, that line is just plain too long otherwise. */
+  padding-right: 12em;
+}
+
+/* But at smaller sizes, the subscribe button moves below the header. */
+@media (max-width: 700px) {
+  .site-header-content .tag-description {
+    padding-right: 0;
+  }
 }
 
 .site-header-content .subscribe-button {

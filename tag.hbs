@@ -8,7 +8,12 @@
     <div class="inner">
         <div class="site-header-content">
             <!--img class="site-logo" src="/content/images/2019/09/holochain_logo_black.png" alt="{{@site.title}}" /-->
-            <h1><span>Holochain</span> {{name}}</h1>
+            <h1>{{name}}</h1>
+            {{#if description}}
+                <p class="tag-description">
+                    {{description}}
+                </p>
+            {{/if}}
             <a class="subscribe-button" href="#subscribe">Subscribe</a>
         </div>
         {{> "site-nav"}}
