@@ -52,7 +52,6 @@
         "url": "https://github.com/holochain/holochain-blog-theme.git"
     },
     "bugs": "https://github.com/holochain/holochain-blog-theme/issues",
-    "contributors": "https://github.com/holochain/holochain-blog-theme/graphs/contributors",
     "devDependencies": {
         "@tryghost/release-utils": "0.3.2",
         "autoprefixer": "9.5.1",
