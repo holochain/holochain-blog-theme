@@ -13,7 +13,7 @@
             <div class="tag-card-bottom">
                 <div class="latest-post">
                 {{#get "posts" filter='tag:{{slug}}'}}
-                    {{#foreach posts limit='1' visibility="all"}}
+                    {{#foreach posts limit="1"}}
                         <h3 class="latest"><span>{{t 'Latest: '}}</span><a class="title" href='{{url}}'>{{title}}</a></h3>
 
                         <span class="post-details">
