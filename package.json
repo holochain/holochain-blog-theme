@@ -4,8 +4,7 @@
     "demo": "https://blog.holochain.org",
     "version": "2.15.0",
     "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -22,7 +21,8 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Klaye Morrison"
+        "name": "Klaye Morrison",
+        "email": "klaye.morrison@holo.host"
     },
     "contributors": [
     {
