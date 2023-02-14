@@ -22,7 +22,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="featured-post-title">{{t 'Featured Post'}}</h2>
             <div class="post-feed">
                 {{#get 'posts' filter='featured:true' include='tag,authors'}}
-                    {{#foreach posts limit="1" visibility="all"}}
+                    {{#foreach posts limit="1"}}
 
                         {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                         {{> "post-card"}}

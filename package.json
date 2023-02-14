@@ -2,10 +2,9 @@
     "name": "holochain",
     "description": "The modified Casper theme for blog.holochain.org",
     "demo": "https://blog.holochain.org",
-    "version": "2.15.0",
+    "version": "2.16.0",
     "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -22,18 +21,19 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-	"name": "Klaye Morrison"
+        "name": "Klaye Morrison",
+        "email": "klaye.morrison@holo.host"
     },
     "contributors": [
-	{
-            "name": "Paul d'Aoust",
-	    "email": "paul.daoust@holo.host"
-	},
-	{
-            "name": "Anisul Kibria",
-            "email": "a@anisul.com",
-            "url": "http://anisul.com"
-	}
+    {
+        "name": "Paul d'Aoust",
+        "email": "paul.daoust@holo.host"
+    },
+    {
+        "name": "Anisul Kibria",
+        "email": "a@anisul.com",
+        "url": "http://anisul.com"
+    }
     ],
     "gpm": {
         "type": "theme",
