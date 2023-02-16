@@ -1,0 +1,51 @@
+{{!-- Links to Previous/Next posts --}}
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            {{#if primary_tag}}
+            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+                {{#if related_posts}}
+                <article class="read-next-card"
+                    {{!-- {{#if ../primary_tag.feature_image}}
+                        style="background-image: url({{img_url ../primary_tag.feature_image size="m"}})"
+                    {{else}} --}}
+                        {{#if @site.cover_image}}
+                            style="background-image: url({{img_url @site.cover_image size="m"}})"
+                        {{/if}}
+                    {{!-- {{/if}} --}}
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; {{@site.title}} &mdash;</small>
+                        {{#../primary_tag}}
+                        <h3 class="read-next-card-header-title"><a href="{{url}}">{{name}}</a></h3>
+                        {{/../primary_tag}}
+                    </header>
+                    <div class="read-next-divider">{{> "icons/infinity"}}</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            {{#foreach related_posts}}
+                            <li><a href="{{url}}">{{title}}</a> <span class="post-details"><span class="publish-date">{{date format="DD MMM YYYY"}}</span> &middot; <span class="reading-time">{{reading_time}}</span></span></li>
+                            {{/foreach}}
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
+                    </footer>
+                </article>
+                {{/if}}
+            {{/get}}
+            {{/if}}
+
+            {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
+            {{#next_post}}
+                {{> "post-card"}}
+            {{/next_post}}
+
+            {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
+            {{#prev_post}}
+                {{> "post-card"}}
+            {{/prev_post}}
+
+        </div>
+    </div>
+</aside>
