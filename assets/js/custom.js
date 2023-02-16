@@ -38,7 +38,7 @@ $( document ).ready(function() {
 
     // Check at the beginning to see if there's any more posts to load.
     if (pagination_available_pages_number == 1) {
-        $load_posts_button.addClass(finished);
+        $load_posts_button.addClass('finished');
     } else {
         $load_posts_button.click(function(e) {
             e.preventDefault();
