@@ -84,21 +84,6 @@
 
     {{> footer}}
 
-    {{!-- The big email subscribe modal content --}}
-    {{#if @labs.subscribers}}
-    <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-overlay-close" href="#"></a>
-        <div class="subscribe-overlay-content">
-            {{#if @site.logo}}
-                <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
-            {{/if}}
-            <h2 class="subscribe-overlay-title">Subscribe for updates</h2>
-            <p class="subscribe-overlay-description">Get stories and progress from Holochain</p>
-            {{subscribe_form placeholder="Your email address"}}
-        </div>
-    </div>
-    {{/if}}
-
     <script>
         var images = document.querySelectorAll('.kg-gallery-image img');
         images.forEach(function (image) {

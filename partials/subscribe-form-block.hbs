@@ -1,45 +1,15 @@
 <section class="subscribe-form">
-    <h3 class="subscribe-form-title">{{t "Subscribe for updates"}}</h3>
-    <p>{{t "Get stories and progress from the Holochain team"}}</p>
-
-    <form action="https://www.getdrip.com/forms/228623100/submissions" method="post" data-drip-embedded-form="228623100">
-
-    <div class="form-group"><input type="email" id="drip-email" class="subscribe-email" name="fields[email]" placeholder="Your email address" required></div>
-
-    <div class="gdpr">
-        <input type="hidden" name="fields[eu_consent]" id="drip-eu-consent-denied" value="denied">
-        <input type="checkbox" name="fields[eu_consent]" id="drip-eu-consent" value="granted">
-        <label for="drip-eu-consent">{{t "I understand and agree to the terms of Holochain's" }} <a href="https://www.holochain.org/privacy-policy/">{{t "privacy policy"}}</a>.</label>
-    </div>
-
-    <input type="hidden" name="fields[eu_consent_message]" value="">
-
-    <button type="submit"><span>{{t "Subscribe"}}</span></button>
-
-    </form>
-
+    <h3 class="subscribe-form-title">Subscribe for updates</h3>
+    <p>Get stories and progress from the Holochain team</p>
+    {{> "subscribe-form-inner-drip"}}
 </section>
 
 <div id="subscribe" class="subscribe-overlay">
     <a class="subscribe-overlay-close" href="#"></a>
     <div class="subscribe-overlay-content">
             <img class="subscribe-overlay-logo" src="https://holochain.ghost.io/content/images/2019/05/holochain_logo_blog.png" alt="Holochain Blog"/>
-        <h2 class="subscribe-overlay-title">{{t "Subscribe for updates"}}</h2>
-
-        <p class="subscribe-overlay-description">{{t "Get stories and progress from Holochain"}}</p>
-        <form action="https://www.getdrip.com/forms/228623100/submissions" method="post" data-drip-embedded-form="228623100">
-        <div class="form-group"><input type="email" id="drip-email" class="subscribe-email" name="fields[email]" placeholder="Your email address" required></div>
-
-        <div class="gdpr">
-            <input type="hidden" name="fields[eu_consent]" id="drip-eu-consent-denied" value="denied">
-            <input type="checkbox" name="fields[eu_consent]" id="drip-eu-consent" value="granted">
-            <label for="drip-eu-consent">{{t "I understand and agree to the terms of Holochain's"}} <a href="https://www.holochain.org/privacy-policy/">{{t "privacy policy"}}</a>.</label>
-        </div>
-
-        <input type="hidden" name="fields[eu_consent_message]" value="">
-
-        <button type="submit"><span>{{t "Subscribe"}}</span></button>
-        </form>
-
+        <h2 class="subscribe-overlay-title">Subscribe for updates</h2>
+        <p class="subscribe-overlay-description">Get stories and progress from Holochain</p>
+        {{> "subscribe-form-inner-drip"}}
     </div>
 </div>
