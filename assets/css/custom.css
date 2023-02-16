@@ -896,10 +896,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 .subscribe-form {
   border: none;
   margin-top: 3em;
-  background: #3718ad
-    url(https://holochain.ghost.io/content/images/size/w2000/2019/05/holochain-back.jpeg);
-  background-size: 100% auto;
-  background-position: center;
+  background: #4720e3;
   border-radius: 0;
   margin-bottom: 0;
 }
@@ -950,7 +947,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 .h-banner {
   width: 100%;
   height: 50px;
-  background: #3718ad;
+  background: #4720e3;
   z-index: 100;
   position: relative;
 }
@@ -1103,7 +1100,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 /* Page footer */
 
 .site-footer, .site-footer-global-nav {
-  background: #3718ad;
+  background: #162550;
 }
 
 .site-footer-global-nav {
