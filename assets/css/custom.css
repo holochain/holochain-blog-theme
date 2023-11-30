@@ -951,7 +951,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 
 .h-banner {
   width: 100%;
-  height: 98px;
+  height: 48px;
   background: #fff;
   z-index: 100;
   position: relative;
@@ -1018,10 +1018,9 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 }
 
 .h-icons li {
-  width: 18px;
   margin: 0 0 0 15px;
   padding: 0;
-  line-height: 47px;
+  line-height: 48px;
   float: left;
 }
 
@@ -1474,12 +1473,6 @@ figcaption {
   font-weight: bold;
   display: none;
   margin-right: 8px;
-}
-
-.header-search svg {
-  margin-top: -15px;
-  width: 32px;
-  cursor: pointer;
 }
 
 /* If Active
