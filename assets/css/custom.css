@@ -1269,7 +1269,7 @@ figcaption {
   text-align: center;
 }
 
-/* Load More 
+/* Load More
 -----------------------------------------*/
 
 .load-more {
@@ -1588,7 +1588,7 @@ figcaption {
 .post-details .publish-date:after {
   content: '\b7\a0';
   padding-left: 5px;
-} 
+}
 
 .post-card-large ~ .post-card-large .post-card-title {
   margin: 0;
