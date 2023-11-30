@@ -487,9 +487,8 @@ a, button {
   border-radius: 0;
   font-size: 2.4rem;
   font-weight: 700;
-  height: 1.4em;
   line-height: 1.8em;
-  padding: 0 0.7em 0.25em;
+  padding: 0 0.7em;
 }
 
 .site-header-content .subscribe-button:hover {
