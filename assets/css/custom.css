@@ -1041,6 +1041,10 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
   vertical-align: middle;
 }
 
+.header-logo-small {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .h-icons {
     display: none;
@@ -1067,6 +1071,14 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 
   .h-hide {
     display: none;
+  }
+
+  .header-logo-large {
+    display: none;
+  }
+
+  .header-logo-small {
+    display: inline-block;
   }
 }
 
