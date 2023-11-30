@@ -488,8 +488,8 @@ a, button {
   font-size: 2.4rem;
   font-weight: 700;
   height: 1.4em;
-  line-height: 1.4em;
-  padding: 0 0.7em;
+  line-height: 1.8em;
+  padding: 0 0.7em 0.25em;
 }
 
 .site-header-content .subscribe-button:hover {
@@ -498,9 +498,12 @@ a, button {
   color: #000;
 }
 
+.home-template .site-header {
+  background: #4820e3;
+}
+
 .home-template .site-header-content {
   padding: 40px 0 45px;
-  background: #4820e3;
   color: #fff;
 }
 
@@ -982,7 +985,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 .h-nav li a {
   font-size: 15px;
   line-height: 50px;
-  color: #fff;
+  color: inherit;
   text-decoration: none;
   font-weight: 400;
   position: relative;
@@ -1022,14 +1025,14 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
   float: left;
 }
 
-.h-icons li:first-child {
+.h-icons li {
   width: auto;
   margin: 0 10px 0 0;
   line-height: 49px;
 }
 
-.h-icons li:first-child a {
-  color: #fff;
+.h-icons li a {
+  color: inherit;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.4px;
@@ -1037,7 +1040,6 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 }
 
 .h-icons svg {
-  fill: #fff;
   vertical-align: middle;
 }
 
@@ -1461,10 +1463,6 @@ figcaption {
 
 /* Search icon
 ------------------------------------- */
-.fa-search {
-  color: #00ffce;
-}
-
 .header-search {
   line-height: 0;
   margin-top: 8px;
@@ -1482,7 +1480,6 @@ figcaption {
   margin-top: -15px;
   width: 32px;
   cursor: pointer;
-  fill: #fff;
 }
 
 /* If Active
