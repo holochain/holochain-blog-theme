@@ -1083,6 +1083,7 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
   }
 
   .header-logo-small {
+    width: 30px;
     display: inline-block;
   }
 }
