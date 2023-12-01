@@ -720,7 +720,6 @@ want is for others to only be smaller (two columns) at larger viewports.
     margin: 0 -10vw -165px;
     background: var(--lightgrey) center center;
     border-radius: 5px;
-    overflow: hidden;
 }
 
 @media (max-width: 1170px) {
