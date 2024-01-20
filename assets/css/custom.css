@@ -2433,11 +2433,13 @@ a.read-all-posts:hover {
   max-height: 100%;
 }
 
-.menu_item.search_item {
+.menu_item.search_item,
+.menu_item.subs_item a {
   color: #4720e3;
 }
 
-.menu_item.search_item:hover {
+.menu_item.search_item:hover,
+.menu_item.subs_item a:hover {
   color: #0dddd3;
 }
 
