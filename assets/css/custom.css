@@ -1995,9 +1995,9 @@ a.read-all-posts:hover {
 
 .hamburger-box {
   display: inline-block;
-  height: 2.5rem;
+  height: 2.4rem;
   position: relative;
-  width: 3.5rem;
+  width: 4rem;
 }
 
 .hamburger-inner:after, .hamburger-inner:before {
@@ -2007,23 +2007,23 @@ a.read-all-posts:hover {
 
 .hamburger-inner {
   display: block;
-  margin-top: -0.125rem;
+  margin-top: -0.2rem;
   top: 50%;
 }
 .hamburger-inner, 
 .hamburger-inner:after, 
 .hamburger-inner:before {
   background-color: #000;
-  border-radius: 0.25rem;
-  height: .5rem;
+  border-radius: 0.4rem;
+  height: .4rem;
   position: absolute;
   transition-duration: .15s;
   transition-property: transform;
   transition-timing-function: ease;
-  width: 2.5rem;
+  width: 4rem;
 }
 .hamburger--slider .hamburger-inner {
-  top: 0.25rem;
+  top: 0.2rem;
 }
 
 .hamburger-inner, 
@@ -2039,7 +2039,7 @@ a.read-all-posts:hover {
   width: 2.5rem;
 }
 .hamburger--slider .hamburger-inner:before {
-  top: .9rem;
+  top: 1rem;
   transition-duration: .15s;
   transition-property: transform,opacity;
   transition-timing-function: ease;
@@ -2058,10 +2058,10 @@ a.read-all-posts:hover {
   width: 3.5rem;
 }
 .hamburger--slider .hamburger-inner:after {
-  top: 1.8rem;
+  top: 2rem;
 }
 .hamburger-inner:after {
-  bottom: -0.625rem;
+  bottom: -1rem;
 }
 
 .hamburger.is-active .hamburger-inner, 
@@ -2071,16 +2071,16 @@ a.read-all-posts:hover {
 }
 
 .hamburger--slider.is_active .hamburger-inner {
-  transform: translate3d(0,1.2rem,0) rotate(45deg);
+  transform: translate3d(0,1rem,0) rotate(45deg);
 }
 
 .hamburger--slider.is_active .hamburger-inner:before {
     opacity: 0;
-    transform: rotate(-45deg) translate3d(-0.6rem,-0.6rem,0);
+    transform: rotate(-45deg) translate3d(-0.57152rem,-0.6rem,0);
 }
 
 .hamburger--slider.is_active .hamburger-inner:after {
-  transform: translate3d(0,-1.8rem,0) rotate(-90deg);
+  transform: translate3d(0,-2rem,0) rotate(-90deg);
 }
 
 .new-header .main_menu {
@@ -2173,7 +2173,7 @@ a.read-all-posts:hover {
   z-index: 12;
 }
 
-.new-header .main_menu>li:hover .sub-menu li {
+.new-header .main_menu>li .sub-menu li {
   padding: 0;
 }
 
@@ -2358,7 +2358,6 @@ a.read-all-posts:hover {
 }
 
 .new-header .mobile_menu .main_menu>li>button {
-  border-bottom: none;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
@@ -2367,7 +2366,6 @@ a.read-all-posts:hover {
 
 @media screen and (max-width: 880px) {
   .new-header .mobile_menu .main_menu>li>button:hover {
-    border-bottom: 2px solid;
     border-bottom-color: #0dddd3;
   }
 }
@@ -2376,7 +2374,7 @@ a.read-all-posts:hover {
   margin: .8rem;
 }
 
-.new-header .mobile_menu.is_active .main_menu>li:hover .sub-menu {
+.new-header .mobile_menu.is_active .main_menu>li .sub-menu {
   margin: 0.6rem 0.4rem 0;
 }
 
