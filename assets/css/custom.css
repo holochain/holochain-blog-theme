@@ -2340,10 +2340,6 @@ a.read-all-posts:hover {
   }
 }
 
-.new-header .mobile_menu .main_menu>li:hover .sub-menu {
-  margin: .8rem;
-}
-
 .new-header .mobile_menu.is_active .main_menu>li .sub-menu {
   margin: 0.6rem 0.4rem 0;
 }
