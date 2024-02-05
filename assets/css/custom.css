@@ -1924,34 +1924,41 @@ a.read-all-posts:hover {
   margin: 0 auto;
   padding: 0 1.875rem;
 }
+
 @media screen and (min-width: 1200px) {
   .container {
     width: 95%;
   }
 }
+
 @media screen and (min-width: 1450px) {
   .container {
     width: 80%;
   }
 }
+
 .new-header .container {
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  padding: 30px 15px 0;
-  /* padding: 30px 0 0; */
+  padding: 30px 4vw 0;
 }
+
 @media (min-width:881px) {
   .new-header .container {
-    /* padding: 30px 40px 0; */
+    padding: 30px 4vw 0;
+  }
+}
+
+@media (min-width:1200px) {
+  .new-header .container {
     padding: 30px 0 0;
   }
 }
 
 @media screen and (max-width: 880px) {
   .new-header .container {
-    padding-bottom: 22px;
-    padding-top: 22px;
+    padding: 22px 4vw 22px;
   }
 }
 
@@ -2100,15 +2107,28 @@ a.read-all-posts:hover {
   transition: color .25s;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1465px) {
   .new-header .main_menu>li>button {
     font-size: 1.5rem;
   }
 }
 
+.new-header .main_menu>li.subs_item>button {
+  line-height: 2;
+  margin-top: -2px;
+}
+
+.new-header .main_menu>li.search_item {
+  margin-top: -4px;
+}
+
 .new-header .main_menu>li.current_page>button, 
 .new-header .main_menu>li:hover>button {
   border-bottom-color: #0dddd3;
+}
+
+.new-header .main_menu>li.subs_item:hover>button {
+  border-bottom-color: transparent;
 }
 
 .new-header ul {
@@ -2203,7 +2223,7 @@ a.read-all-posts:hover {
   line-height: 1.29;
 }
 
-@media (min-width:1200px) {
+@media (min-width:1465px) {
   .new-header .main_menu>li.another_link a {
     font-size: 1.5rem;
   }
@@ -2346,6 +2366,7 @@ a.read-all-posts:hover {
 
 .new-header .mobile_menu .main_menu>li.another_link a {
   font-size: 16px;
+  font-weight: 700;
   line-height: 19px;
   padding-bottom: 1.8rem;
 }
@@ -2426,9 +2447,24 @@ a.read-all-posts:hover {
   }
 }
 
+.new-header .mobile_menu .links_btns {
+  align-items: center;
+  display: flex;
+  gap: .6875rem;
+}
+
 @media screen and (max-width: 880px) {
     .new-header .mobile_menu .links_btns {
       margin: 0;
       padding-bottom: 0;
   }
+}
+
+.new-header .mobile_menu .links_btns a:first-of-type {
+  margin: 0;
+}
+
+.new-header .mobile_menu .links_btns .search_item {
+  align-items: center;
+  display: flex;
 }
