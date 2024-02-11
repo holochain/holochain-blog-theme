@@ -1946,19 +1946,25 @@ a.read-all-posts:hover {
 
 @media (min-width:881px) {
   .new-header .container {
-    padding: 30px 4vw 0;
+    padding: 30px 4vw 0 3vw;
   }
 }
 
 @media (min-width:1200px) {
   .new-header .container {
-    padding: 30px 0 0;
+    padding: 30px 20px 0 2px;
   }
 }
 
 @media screen and (max-width: 880px) {
   .new-header .container {
-    padding: 22px 4vw 22px;
+    padding: 22px 3vw 22px 2.8vw;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .new-header .container {
+      width: 85%;
   }
 }
 
@@ -2084,6 +2090,13 @@ a.read-all-posts:hover {
   transition: .25s;
 }
 
+@media (min-width:800px) and (max-width:969px) {
+  .new-header .top-nav.main_menu>li {
+    padding-left: 0;
+    margin: 0 .4rem;
+  }
+}
+
 @media screen and (min-width: 970px) {
     .new-header .top-nav.main_menu>li {
       font-size: 1.5rem;
@@ -2109,7 +2122,7 @@ a.read-all-posts:hover {
 
 @media screen and (min-width: 1465px) {
   .new-header .main_menu>li>button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -2225,7 +2238,7 @@ a.read-all-posts:hover {
 
 @media (min-width:1465px) {
   .new-header .main_menu>li.another_link a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
