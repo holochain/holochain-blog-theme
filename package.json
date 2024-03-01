@@ -2,7 +2,7 @@
     "name": "holochain",
     "description": "The modified Casper theme for blog.holochain.org",
     "demo": "https://blog.holochain.org",
-    "version": "2.18.7",
+    "version": "2.18.8",
     "engines": {
         "ghost": ">=5.0.0"
     },
