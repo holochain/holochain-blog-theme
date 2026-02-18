@@ -902,6 +902,8 @@ body:not(.tag-hash-art-white, .tag-hash-art-clear) .post-full-image {
 
 /* Subscribe */
 
+/* Most of these styles are not used, because we switched to EngageBay which simply embeds an iframe. */
+
 .home-template .subscribe-form {
   margin-bottom: 0;
 }
